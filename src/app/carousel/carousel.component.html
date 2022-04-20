@@ -1,0 +1,21 @@
+<div class="swiper">
+  <div class="swiper__controls">
+    <div class="icon next" (click)="slideNext()">
+      <img class="" src="../../assets/next.svg" alt="">
+    </div>
+    <div class="icon prev" (click)="slidePrev()">
+      <img class="" src="../../assets/prev.svg" alt="">
+
+    </div>
+  </div>
+
+  <div class="swiper__slides-wrapper">
+    <div class="swiper__slide"
+    *ngFor="let img of images let i=index"
+    [ngStyle]="{'transform': 'translateX(' + (swiperData.transtateX) + '%)'}">
+      <img [src]="img.url" alt="">
+      <div class="name">{{img.name}}</div>
+    </div>
+  </div>
+  <div class="badge">image {{swiperData.activeIndex + 1}}/{{images.length}}</div>
+</div>

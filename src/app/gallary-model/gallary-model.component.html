@@ -1,0 +1,8 @@
+<div class="model">
+  <div class="overlay"
+   [ngStyle]="{'display': (galleryService.showGalleryModel$ | async) ? 'block': 'none'}"
+   (click)="closeModel()"
+   ></div>
+
+   <app-carousel [items] ="images"></app-carousel>
+</div>

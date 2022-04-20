@@ -1,0 +1,13 @@
+<div class="gallery">
+  <h1 class="gallery__title">GALLERY</h1>
+  <hr>
+  <div class="gallery__images">
+    <div class="gallery__img__wrapper" *ngFor="let img of AllImages; let i=index">
+      <div class="overlay"></div>
+      <img [src]="img.url" alt="">
+      <div class="icon" (click)="openModel(img.uuid, i)">
+        <img src="../../assets/zoom.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
